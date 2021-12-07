@@ -1,6 +1,10 @@
 @extends('layout.happy')
 @section('title', 'Data Absen')
-@section('judulhalaman', 'DATA ABSEN')
+@section('judulhalaman', 'TAMBAH ABSEN')
+
+@section('bootstrap')
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+@endsection
 
 @section('konten')
     <a href="/absen"> Kembali</a>
@@ -50,13 +54,24 @@
                     });
                 </script>
             </div>
+
+            <div class="row">
+                <div class='col-lg-9'>
+                    <div class="form-group">
+                        <label for="Status" class="col-sm-2 control-label"> Status :</label>
+                        <div class='col-sm-4 input-group date' id='Status'>
+                            <input type="radio" id="h" name="status" value="H">
+                            <label for="H">HADIR</label><br>
+                            <input type="radio" id="a" name="status" value="A" checked="checked">
+                            <label for="A">TIDAK HADIR</label><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <input type="submit" value="Simpan Data">
         </div>
-        Status
-        <input type="radio" id="h" name="status" value="H">
-        <label for="h">HADIR</label><br>
-        <input type="radio" id="a" name="status" value="A" checked="checked">
-        <label for="a">TIDAK HADIR</label><br>
-        <input type="submit" value="Simpan Data">
+
+
     </form>
 @endsection
 

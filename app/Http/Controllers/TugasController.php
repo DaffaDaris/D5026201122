@@ -5,28 +5,30 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
+
 class TugasController extends Controller
 {
     public function index()
     {
-        $tugas = DB::table('tugas')->get();
+        $tugas = DB::table('tugas')->orderBy('IDPegawai', 'asc')->get();
 
         return view('tugas.index', ['tugas' => $tugas]);
     }
     public function tambah()
     {
 
+        $pegawai = DB::table('pegawai')->orderBy('pegawai_nama', 'asc')->get();
 
-        return view('tugas.tambah');
+        return view('tugas.tambah',['pegawai' => $pegawai]);
     }
     public function store(Request $request)
     {
 
         DB::table('tugas')->insert([
-            'IDPegawai' => $request->IDPegawai,
-            'Tanggal' => $request->Tanggal,
-            'NamaTugas' => $request->NamaTugas,
-            'Status' => $request->Status
+            'IDPegawai' => $request->idpegawai,
+            'Tanggal' => $request->tanggal,
+            'NamaTugas' => $request->namaTugas,
+            'Status' => $request->status
         ]);
 
         return redirect('/tugas');
@@ -36,17 +38,22 @@ class TugasController extends Controller
 
         $tugas = DB::table('tugas')->where('ID', $id)->get();
 
-        return view('tugas.edit', ['tugas' => $tugas]);
+        $pegawai = DB::table('pegawai')->orderBy('pegawai_nama', 'asc')->get();
+
+        $status = "Sedang Mengedit" ;
+
+
+        return view('tugas.edit',['tugas' => $tugas,'pegawai' => $pegawai,'Status' => $status]);
     }
 
     public function update(Request $request)
     {
 
         DB::table('tugas')->where('ID', $request->id)->update([
-            'IDPegawai' => $request->IDPegawai,
-            'Tanggal' => $request->Tanggal,
-            'NamaTugas' => $request->NamaTugas,
-            'Status' => $request->Status
+            'IDPegawai' => $request->idpegawai,
+            'Tanggal' => $request->tanggal,
+            'NamaTugas' => $request->namaTugas,
+            'Status' => $request->status
         ]);
 
         return redirect('/tugas');

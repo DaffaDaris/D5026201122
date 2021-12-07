@@ -1,19 +1,20 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Tabel Tugas</title>
-</head>
-<body>
+@extends('layout.happy')
+@section('title', 'Data Tugas')
+@section('judulhalaman', 'DATA TUGAS')
 
+@section('bootstrap')
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+@endsection
 
-	<h1>Tabel Tugas</h1>
+@section('konten')
 
-	<a href="/tugas/tambah"> + Tambah Tugas</a>
+	<a href="/tugas/tambah"> + Tambah Tugas Baru</a>
 
 	<br/>
 	<br/>
 
-	<table border="1">
+    <div class="container">
+	<table class="table table-striped table-hover" border="1">
 		<tr>
 			<th>IDPegawai</th>
 			<th>Tanggal</th>
@@ -34,7 +35,6 @@
 		</tr>
 		@endforeach
 	</table>
+    </div>
 
-
-</body>
-</html>
+@endsection

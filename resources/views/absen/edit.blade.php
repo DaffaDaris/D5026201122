@@ -2,6 +2,10 @@
 @section('title', 'Data Absen')
 @section('judulhalaman', 'EDIT DATA ABSEN')
 
+@section('bootstrap')
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+@endsection
+
 @section('konten')
 
 	<a href="/absen"> Kembali</a>
