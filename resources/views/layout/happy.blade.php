@@ -9,37 +9,14 @@
     @yield('bootstrap')
 
     <style>
-        body {
-            margin: 0;
-            font-family: var(--bs-body-font-family);
-            font-size: var(--bs-body-font-size);
-            font-weight: var(--bs-body-font-weight);
-            line-height: var(--bs-body-line-height);
-            color: var(--bs-body-color);
-            text-align: var(--bs-body-text-align);
-            background-color: var(--bs-body-bg);
-            -webkit-text-size-adjust: 100%;
-            -webkit-tap-highlight-color: transparent;
+        table {
+            width: 50%;
+        }
+        th, td {
+            text-align: left;
         }
         input[type="radio"]{
             margin: 0 5px 0 10px;
-        }
-        .mb-auto {
-            margin-bottom: auto!important;
-        }
-        .flex-column {
-            flex-direction: column!important;
-        }
-        .nav {
-            display: flex;
-            flex-wrap: wrap;
-            padding-left: 0;
-        }
-        .p-3 {
-            padding: 1rem!important;
-        }
-        .d-flex {
-            display: flex!important;
         }
     </style>
 
@@ -52,21 +29,22 @@
 </head>
 
 <body>
-    <header class="col-12 p-3 mb-3 border-bottom d-flex justify-content-center py-3">
+    <header class="col-12  border-bottom d-flex justify-content-center py-3">
             <div class="navbar-nav col-lg-11 ">
                 <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                    <li class="nav-item mx-5">Daffa' Daris Mahendra Ansori</li>
-                    <li class="nav-item">5026201122</li>
+                    <li class="nav-item mx-5" style="font-size: 20px"><strong>@yield('judulhalaman')</strong></li>
+                    <li class="nav-item mx-3"><strong>Daffa' Daris Mahendra Ansori</strong></li>
+                    <li class="nav-item "><strong>5026201122</strong></li>
                   </ul>
             </div>
-            <div class="dropdown text-end">
-                <img src="images\Heavy Weather.png" width="32" height="32" class="rounded-circle">
+            <div class="navbar-nav mx-5">
+                <img src="images\Heavy Weather.png" width="48" height="48" class="rounded-circle">
             </div>
     </header>
 
 
     @section('sidebar')
-    <nav id="navbar" class="col-md-3 col-lg-2 d-md-block bg-light sidebar-nav" >
+    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar-nav" >
         <ul class="nav nav-pills flex-column mb-auto">
             <li class="nav-item"><a href="/pegawai">Pegawai</a></li>
             <li class="nav-item"><a href="/absen">Absen</a></li>
@@ -75,9 +53,11 @@
             <li class="nav-item"><a href="">Praktikum</a></li>
         </ul>
     </nav>
-    <div class="col-md-8 col-lg-10">
-    @section('konten')
-    @show
+    <div class="container">
+        <div class="col-md-4 col-lg-6">
+            @section('konten')
+            @show
+        </div>
     </div>
     @show
 

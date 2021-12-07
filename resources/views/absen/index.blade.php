@@ -14,15 +14,15 @@
 	<br/>
 
     <div class="container">
-	<table class="table table-striped table-hover" border="1">
-		<tr>
+	<table class="table table-hover table-bordered table-sm">
+		<thead class="table-dark table-responsive">
 			<th>ID Pegawai</th>
 			<th>Tanggal</th>
 			<th>Status</th>
 			<th>Opsi</th>
-		</tr>
+        </thead>
 		@foreach($absen as $a)
-		<tr>
+		<tbody>
 			<td>{{ $a->IDPegawai }}</td>
 			<td>{{ $a->Tanggal }}</td>
 			<td>{{ $a->Status }}</td>
@@ -31,7 +31,7 @@
 				|
 				<a href="/absen/hapus/{{ $a->ID}}">Hapus</a>
 			</td>
-		</tr>
+		</tbody>
 		@endforeach
 	</table>
     </div>

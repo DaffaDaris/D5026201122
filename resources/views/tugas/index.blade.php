@@ -14,15 +14,16 @@
 	<br/>
 
     <div class="container">
-	<table class="table table-striped table-hover" border="1">
-		<tr>
+	<table class="table table-hover table-bordered table-sm">
+        <thead class="table-dark table-responsive">
 			<th>IDPegawai</th>
 			<th>Tanggal</th>
 			<th>NamaTugas</th>
 			<th>Status</th>
-		</tr>
+            <th>Opsi</th>
+		</thead>
 		@foreach($tugas as $t)
-		<tr>
+		<tbody>
 			<td>{{ $t->IDPegawai}}</td>
 			<td>{{ $t->Tanggal }}</td>
 			<td>{{ $t->NamaTugas}}</td>
@@ -32,7 +33,7 @@
 				|
 				<a href="/tugas/hapus/{{ $t->ID }}">Hapus</a>
 			</td>
-		</tr>
+		</tbody>
 		@endforeach
 	</table>
     </div>

@@ -14,16 +14,16 @@
 	<br/>
 
     <div class="container">
-	<table class="table table-striped table-hover" border="1">
-		<tr>
+	<table class="table table-hover table-bordered table-sm">
+          <thead class="table-dark table-responsive">
 			<th>Nama</th>
 			<th>Jabatan</th>
 			<th>Umur</th>
 			<th>Alamat</th>
 			<th>Opsi</th>
-		</tr>
+		</thead>
 		@foreach($pegawai as $p)
-		<tr>
+		<tbody>
 			<td>{{ $p->pegawai_nama }}</td>
 			<td>{{ $p->pegawai_jabatan }}</td>
 			<td>{{ $p->pegawai_umur }}</td>
@@ -33,7 +33,7 @@
 				|
 				<a href="/pegawai/hapus/{{ $p->pegawai_id }}">Hapus</a>
 			</td>
-		</tr>
+		</tbody>
 		@endforeach
 	</table>
     </div>
