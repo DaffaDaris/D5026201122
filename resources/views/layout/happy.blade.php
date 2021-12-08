@@ -35,13 +35,14 @@
         }
         .foot{
             margin: 5%;
-            margin-top: 90%;
+            margin-top: 80%;
         }
 
         input[type="radio"]{
             margin: 0 10px;
         }
         body{
+            font-family: Arial, Helvetica, sans-serif;
             display: flex;
             flex-wrap: nowrap;
             height: 100vh;
@@ -58,6 +59,14 @@
         .header-judul{
             font-size: 30px;
             font-weight: bolder;
+        }
+        .nav-pills{
+            margin-left: 10%;
+            margin-right: 10%;
+            margin-top: 10%;
+        }
+        li a:hover{
+            color: #1C1C26
         }
     </style>
 
@@ -87,7 +96,7 @@
     </header>
 
 
-    <nav id="sidebarMenu" class="nav-menu" >
+    <nav id="sidebarMenu" class="nav-menu sidebar" >
         <ul class="nav nav-pills flex-column">
             <li class="nav-item" aria-current="page"><a href="/pegawai" class="nav-link text-white">Pegawai</a></li>
             <li class="nav-item" aria-current="page"><a href="/absen" class="nav-link text-white">Absen</a></li>
