@@ -9,14 +9,55 @@
     @yield('bootstrap')
 
     <style>
-        table {
-            width: 50%;
+        .header{
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 300px;
+            transition: all ease-in-out 0.5s;
+            padding: 0 15px;
+            box-shadow: -20px 0 35px -25px black, 20px 0 35px -25px black;
+            background: #1C1C26;
+            overflow-y: auto;
+            color: ghostwhite;
         }
-        th, td {
-            text-align: left;
+        .card {
+            position: absolute;
+            width: 800px;
+            padding: 25px;
+            padding-top: 0;
+            padding-bottom: 0;
+            left: 50%;
+            top: 67.5px;
+            margin-left: -400px;
+            z-index: 5;
         }
+        .foot{
+            margin: 5%;
+            margin-top: 90%;
+        }
+
         input[type="radio"]{
-            margin: 0 5px 0 10px;
+            margin: 0 10px;
+        }
+        body{
+            display: flex;
+            flex-wrap: nowrap;
+            height: 100vh;
+            height: -webkit-fill-available;
+            max-height: 100vh;
+            overflow-x: auto;
+            overflow-y: hidden;
+        }
+        .rounded-circle{
+            border-radius: 4px;
+            border:solid ghostwhite ;
+            margin-bottom: 20px;
+        }
+        .header-judul{
+            font-size: 30px;
+            font-weight: bolder;
         }
     </style>
 
@@ -26,45 +67,56 @@
     <script
     src="http://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/src/js/bootstrap-datetimepicker.js">
     </script>
+
 </head>
 
 <body>
+    <div class="container">
+
+
+    <div class="col-md-3 col-lg-4">
+    <div class="header">
     <header class="col-12  border-bottom d-flex justify-content-center py-3">
-            <div class="navbar-nav col-lg-11 ">
-                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                    <li class="nav-item mx-5" style="font-size: 20px"><strong>@yield('judulhalaman')</strong></li>
-                    <li class="nav-item mx-3"><strong>Daffa' Daris Mahendra Ansori</strong></li>
-                    <li class="nav-item "><strong>5026201122</strong></li>
-                  </ul>
-            </div>
-            <div class="navbar-nav mx-5">
-                <img src="images\Heavy Weather.png" width="48" height="48" class="rounded-circle">
+            <div class="nav-navbar text-center">
+                    <div class="header-judul"><strong>@yield('judulhalaman')</strong></div><br>
+                    <span ><strong><img  src="images\Heavy Weather.png" width="100"  class="rounded-circle"></a></strong></span><br>
+                    <span ><strong>Daffa' Daris Mahendra Ansori</strong></span><br>
+                    <span ><strong>5026201122</strong></span><br>
+
             </div>
     </header>
 
 
-    @section('sidebar')
-    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar-nav" >
-        <ul class="nav nav-pills flex-column mb-auto">
-            <li class="nav-item"><a href="/pegawai">Pegawai</a></li>
-            <li class="nav-item"><a href="/absen">Absen</a></li>
-            <li class="nav-item"><a href="/tugas">Tugas</a></li>
-            <li class="nav-item"><a href="">Minggu Depan</a></li>
-            <li class="nav-item"><a href="">Praktikum</a></li>
+    <nav id="sidebarMenu" class="nav-menu" >
+        <ul class="nav nav-pills flex-column">
+            <li class="nav-item" aria-current="page"><a href="/pegawai" class="nav-link text-white">Pegawai</a></li>
+            <li class="nav-item" aria-current="page"><a href="/absen" class="nav-link text-white">Absen</a></li>
+            <li class="nav-item" aria-current="page"><a href="/tugas" class="nav-link text-white">Tugas</a></li>
+            <li class="nav-item"><a href="" class="nav-link text-white">Minggu Depan</a></li>
+            <li class="nav-item"><a href="" class="nav-link text-white">Praktikum</a></li>
         </ul>
     </nav>
-    <div class="container">
-        <div class="col-md-4 col-lg-6">
-            @section('konten')
-            @show
+
+    <footer class="foot">
+            <div class="row text-center">
+                <span>&copy; Hak Cipta Daffa' Daris Mahendra Ansori</span>
+            </div>
+    </footer>
+    </div>
+    </div>
+
+
+    <div class="col-lg-6">
+        <div class="card">
+            <h1>@yield('judulhalaman')</h1>
+            <div class="card-body">
+                @section('konten')
+                @show
+            </div>
         </div>
     </div>
-    @show
 
-<div class="container-fluid">
-    <footer >
-            <p class="col-md-4 mb-0 text-muted">&copy; Hak Cipta Daffa' Daris Mahendra Ansori</p>
-    </footer>
+
 </div>
 </body>
 

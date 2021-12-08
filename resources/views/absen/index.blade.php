@@ -13,7 +13,6 @@
 	<br/>
 	<br/>
 
-    <div class="container">
 	<table class="table table-hover table-bordered table-sm">
 		<thead class="table-dark table-responsive">
 			<th>ID Pegawai</th>
@@ -34,6 +33,5 @@
 		</tbody>
 		@endforeach
 	</table>
-    </div>
 
 @endsection

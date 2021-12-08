@@ -11,7 +11,7 @@
 	<a href="/absen"> Kembali</a>
 
 	<br/>
-    <h3>{{ $status }}</h3>
+    <strong>{{ $status }}</strong>
 	<br/>
 
 	@foreach($absen as $a)
@@ -58,13 +58,20 @@
                     });
                 </script>
             </div>
-        </div>
-        Status
-        <input type="radio" id="h" name="status" value="H" @if($a->Status==='H') checked="checked" @endif>
-        <label for="h">HADIR</label><br>
-        <input type="radio" id="a" name="status" value="A" @if($a->Status==='A') checked="checked" @endif>
-        <label for="a">TIDAK HADIR</label><br>
 
+            <div class="row">
+                <div class='col-lg-9'>
+                    <div class="form-group">
+                        <label for="Status" class="col-sm-2 control-label"> Status :</label>
+                        <div class='col-sm-4 input-group date' id='Status'>
+                        <input type="radio" id="h" name="status" value="H" @if($a->Status==='H') checked="checked" @endif>
+                        <label for="h">HADIR</label><br>
+                        <input type="radio" id="a" name="status" value="A" @if($a->Status==='A') checked="checked" @endif>
+                        <label for="a">TIDAK HADIR</label><br>
+                    </div>
+                </div>
+            </div>
+    </div>
 
 		<input type="submit" value="Simpan Data">
 	</form>

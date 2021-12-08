@@ -7,7 +7,6 @@
 @endsection
 
 @section('konten')
-	<h3>Data Pegawai</h3>
 
 	<a href="/pegawai"> Kembali</a>
 
@@ -22,7 +21,7 @@
             <div class='col-lg-9'>
                 <div class="form-group">
                     <label for="pegawai_nama" class="col-sm-2 control-label">Nama Pegawai :</label>
-                        <div class='col-sm-4 input-group date' id='pegawai_nama'>
+                    <div class='col-sm-4 input-group date' id='pegawai_nama'>
 		                <input type="text" name="nama" required="required"> <br/>
                     </div>
                 </div>
