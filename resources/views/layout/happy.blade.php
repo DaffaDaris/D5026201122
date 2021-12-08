@@ -7,7 +7,9 @@
     <link href="http://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/build/css/bootstrap-datetimepicker.css" rel="stylesheet">
 
     @yield('bootstrap')
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Readex+Pro&family=Roboto&display=swap" rel="stylesheet">
     <style>
         .header{
             position: fixed;
@@ -42,7 +44,7 @@
             margin: 0 10px;
         }
         body{
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: 'Readex Pro', sans-serif;
             display: flex;
             flex-wrap: nowrap;
             height: 100vh;
@@ -68,6 +70,9 @@
         li a:hover{
             color: #1C1C26
         }
+        span{
+            margin-top: 20%;
+        }
     </style>
 
     <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -85,7 +90,7 @@
 
     <div class="col-md-3 col-lg-4">
     <div class="header">
-    <header class="col-12  border-bottom d-flex justify-content-center py-3">
+    <header class="col-12  border-bottom d-flex justify-content-center py-3 px-2">
             <div class="nav-navbar text-center">
                     <div class="header-judul"><strong>@yield('judulhalaman')</strong></div><br>
                     <span ><strong><img  src="images\Heavy Weather.png" width="100"  class="rounded-circle"></a></strong></span><br>
