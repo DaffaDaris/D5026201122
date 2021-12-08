@@ -73,6 +73,40 @@
         span{
             margin-top: 20%;
         }
+        input[type=text],
+        input[type=number] {
+            padding:5px;
+            border:2px solid #ccc;
+            -webkit-border-radius: 5px;
+            border-radius: 5px;
+        }
+
+        input[type=text]:focus,
+        input[type=number]:focus {
+            border-color:#333;
+        }
+        textarea{
+            padding:5px;
+            border:2px solid #ccc;
+            -webkit-border-radius: 5px;
+            border-radius: 5px;
+        }
+        input[type=submit] {
+            padding:15px 25px;
+            color: ghostwhite;
+            background:#1C1C26;
+            border:0 none;
+            cursor:pointer;
+            -webkit-border-radius: 5px;
+            border-radius: 5px;
+            text-align: center;
+            display: block;
+            margin: 2% 25% 2% 25%;
+
+        }
+
+
+
     </style>
 
     <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
