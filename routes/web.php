@@ -53,5 +53,12 @@ Route::get('/absen/edit/{id}','AbsenController@edit');
 Route::post('/absen/update','AbsenController@update');
 Route::get('/absen/hapus/{id}','AbsenController@hapus');
 
+//route tabel bedak
+Route::get('/bedak','BedakController@index');
+Route::get('/bedak/tambah','BedakController@tambah');
+Route::post('/bedak/store','BedakController@store');
+Route::get('/bedak/edit/{id}','BedakController@edit');
+Route::post('/bedak/update','BedakController@update');
+Route::get('/bedak/hapus/{id}','BedakController@hapus');
 
 

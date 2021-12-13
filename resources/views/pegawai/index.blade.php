@@ -8,6 +8,8 @@
 
 @section('konten')
 
+<div class="container">
+
 	<a href="/pegawai/tambah"> + Tambah Pegawai Baru</a>
 
 	<br/>
@@ -37,4 +39,11 @@
 		@endforeach
 	</table>
 
-    @endsection
+    Halaman : {{ $pegawai->currentPage() }}<br/>
+	Jumlah Data : {{ $pegawai->total() }}<br/>
+	Data Per Halaman : {{ $pegawai->perPage() }}<br/>
+
+	{{ $pegawai->links() }}
+</div>
+ @endsection
+

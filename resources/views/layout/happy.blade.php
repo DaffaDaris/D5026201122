@@ -11,33 +11,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Readex+Pro&family=Roboto&display=swap" rel="stylesheet">
     <style>
+
         .header{
-            position: fixed;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            width: 300px;
-            transition: all ease-in-out 0.5s;
-            padding: 0 15px;
-            box-shadow: -20px 0 35px -25px black, 20px 0 35px -25px black;
+            width: 200px;
             background: #1C1C26;
-            overflow-y: auto;
             color: ghostwhite;
-        }
-        .card {
-            position: absolute;
-            width: 800px;
-            padding: 25px;
-            padding-top: 0;
-            padding-bottom: 0;
-            left: 50%;
-            top: 67.5px;
-            margin-left: -400px;
-            z-index: 5;
-        }
-        .foot{
-            margin: 5%;
-            margin-top: 80%;
+            height: 100%;
+            position: fixed;
+            overflow: auto;
         }
 
         input[type="radio"]{
@@ -45,13 +26,9 @@
         }
         body{
             font-family: 'Readex Pro', sans-serif;
-            display: flex;
-            flex-wrap: nowrap;
-            height: 100vh;
-            height: -webkit-fill-available;
-            max-height: 100vh;
-            overflow-x: auto;
-            overflow-y: hidden;
+            height: 100%;
+            width: 100%;
+
         }
         .rounded-circle{
             border-radius: 4px;
@@ -62,17 +39,7 @@
             font-size: 30px;
             font-weight: bolder;
         }
-        .nav-pills{
-            margin-left: 10%;
-            margin-right: 10%;
-            margin-top: 10%;
-        }
-        li a:hover{
-            color: #1C1C26
-        }
-        span{
-            margin-top: 20%;
-        }
+
         input[type=text],
         input[type=number] {
             padding:5px;
@@ -94,16 +61,41 @@
         input[type=submit] {
             padding:15px 25px;
             color: ghostwhite;
+            border:2px solid #ccc;
             background:#1C1C26;
             border:0 none;
             cursor:pointer;
             -webkit-border-radius: 5px;
             border-radius: 5px;
             text-align: center;
-            display: block;
-            margin: 2% 25% 2% 25%;
-
         }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width:100vw;
+            background: #1C1C26;
+            height: auto;
+
+            color: ghostwhite;
+        }
+
+        .main{
+            margin-left: 15%;
+            padding: 15px;
+        }
+
+        .footer-content{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+
 
 
 
@@ -119,53 +111,49 @@
 </head>
 
 <body>
-    <div class="container">
+
+        <div class="container header">
+            <header class=" py-3 px-2">
+                    <div class="nav-navbar text-center">
+                            <div class="header-judul"><strong>@yield('judulhalaman')</strong></div><br>
+                            <span ><strong><img  src="images\Heavy Weather.png" width="100"  class="rounded-circle"></a></strong></span><br>
+                            <span ><strong>Daffa' Daris Mahendra Ansori</strong></span><br>
+                            <span ><strong>5026201122</strong></span><br>
+
+                    </div>
+            </header>
+            <hr>
+            <div class="row">
+            <nav id="sidebarMenu" class="nav-menu sidebar" >
+                <ul class="nav nav-pills flex-column">
+                    <li class="nav-item"><a href="/pegawai" class="nav-link text-white">Pegawai</a></li>
+                    <li class="nav-item"><a href="/absen" class="nav-link text-white">Absen</a></li>
+                    <li class="nav-item"><a href="/tugas" class="nav-link text-white">Tugas</a></li>
+                    <li class="nav-item"><a href="/bedak" class="nav-link text-white">Bedak</a></li>
+                    <li class="nav-item"><a href="" class="nav-link text-white">Praktikum</a></li>
+                </ul>
+            </nav>
+            </div>
+
+        </div>
 
 
-    <div class="col-md-3 col-lg-4">
-    <div class="header">
-    <header class="col-12  border-bottom d-flex justify-content-center py-3 px-2">
-            <div class="nav-navbar text-center">
-                    <div class="header-judul"><strong>@yield('judulhalaman')</strong></div><br>
-                    <span ><strong><img  src="images\Heavy Weather.png" width="100"  class="rounded-circle"></a></strong></span><br>
-                    <span ><strong>Daffa' Daris Mahendra Ansori</strong></span><br>
-                    <span ><strong>5026201122</strong></span><br>
+        <div class="main container ">
+            <div class="container-fluid">
+                <h1>@yield('judulhalaman')</h1>
+                    @section('konten')
+                    @show
+            <div >
 
             </div>
-    </header>
-
-
-    <nav id="sidebarMenu" class="nav-menu sidebar" >
-        <ul class="nav nav-pills flex-column">
-            <li class="nav-item" aria-current="page"><a href="/pegawai" class="nav-link text-white">Pegawai</a></li>
-            <li class="nav-item" aria-current="page"><a href="/absen" class="nav-link text-white">Absen</a></li>
-            <li class="nav-item" aria-current="page"><a href="/tugas" class="nav-link text-white">Tugas</a></li>
-            <li class="nav-item"><a href="" class="nav-link text-white">Minggu Depan</a></li>
-            <li class="nav-item"><a href="" class="nav-link text-white">Praktikum</a></li>
-        </ul>
-    </nav>
-
-    <footer class="foot">
-            <div class="row text-center">
-                <span>&copy; Hak Cipta Daffa' Daris Mahendra Ansori</span>
-            </div>
-    </footer>
-    </div>
-    </div>
-
-
-    <div class="col-lg-6">
-        <div class="card">
-            <h1>@yield('judulhalaman')</h1>
-            <div class="card-body">
-                @section('konten')
-                @show
             </div>
         </div>
-    </div>
+        <footer>
+            <div class="footer-content" >&copy; Hak Cipta Daffa' Daris Mahendra Ansori</div>
+        </footer>
 
 
-</div>
+
 </body>
 
 </html>

@@ -40,10 +40,7 @@ class AbsenController extends Controller
 
         $pegawai = DB::table('pegawai')->orderBy('pegawai_nama', 'asc')->get();
 
-        $status = "Sedang Mengedit" ;
-
-
-	    return view('absen.edit',['absen' => $absen,'pegawai' => $pegawai,'status' => $status]);
+	    return view('absen.edit',['absen' => $absen,'pegawai' => $pegawai]);
 
     }
 

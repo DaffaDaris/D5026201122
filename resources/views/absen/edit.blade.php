@@ -10,9 +10,6 @@
 
 	<a href="/absen"> Kembali</a>
 
-	<br/>
-    <strong>{{ $status }}</strong>
-	<br/>
 
 	@foreach($absen as $a)
 	<form action="/absen/update" method="post">
