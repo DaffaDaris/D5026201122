@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Readex+Pro&family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
 
         .header{
@@ -46,6 +47,7 @@
             border:2px solid #ccc;
             -webkit-border-radius: 5px;
             border-radius: 5px;
+
         }
 
         input[type=text]:focus,
@@ -57,17 +59,18 @@
             border:2px solid #ccc;
             -webkit-border-radius: 5px;
             border-radius: 5px;
+
         }
         input[type=submit] {
-            padding:15px 25px;
+
             color: ghostwhite;
-            border:2px solid #ccc;
             background:#1C1C26;
-            border:0 none;
             cursor:pointer;
             -webkit-border-radius: 5px;
             border-radius: 5px;
             text-align: center;
+            border: none;
+            padding: 7px 10px 7px 10px;
         }
 
         footer {
@@ -78,7 +81,6 @@
             width:100vw;
             background: #1C1C26;
             height: auto;
-
             color: ghostwhite;
         }
 
@@ -93,6 +95,10 @@
             justify-content: center;
             flex-direction: column;
             text-align: center;
+            overflow: hidden;
+        }
+
+        .search{
         }
 
 

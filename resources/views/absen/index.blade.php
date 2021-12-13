@@ -11,6 +11,13 @@
 	<a href="/absen/tambah"> + Tambah Absen Baru</a>
 
 	<br/>
+    <p>Cari @yield('title') :</p>
+    <div class="search">
+            <form action="/absen/cari" method="GET">
+                <input type="text" name="cari" placeholder="Cari Pegawai .." value="{{ old('cari') }}" >
+                <input type="submit" value="Cari">
+            </form>
+    </div>
 	<br/>
 
 	<table class="table table-hover table-bordered table-sm">

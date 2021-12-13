@@ -1,6 +1,6 @@
 @extends('layout.happy')
 @section('title', 'Data Bedak')
-@section('judulhalaman', 'DATA Bedak')
+@section('judulhalaman', 'DATA BEDAK')
 
 @section('bootstrap')
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
@@ -11,6 +11,13 @@
 	<a href="/bedak/tambah"> + Tambah Bedak Baru</a>
 
 	<br/>
+    <p>Cari @yield('title') :</p>
+    <div class="search">
+            <form action="/bedak/cari" method="GET">
+                <input type="text" name="cari" placeholder="Cari Bedak .." value="{{ old('cari') }}" >
+                <input type="submit" value="Cari">
+            </form>
+    </div>
 	<br/>
 
 

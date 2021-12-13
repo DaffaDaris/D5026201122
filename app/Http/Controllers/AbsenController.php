@@ -10,7 +10,7 @@ class AbsenController extends Controller
 {
     public function index()
     {
-    	$absen = DB::table('absen')->orderBy('Tanggal', 'asc')->get();
+    	$absen = DB::table('absen')->join('pegawai', 'IDPegawai', '=', 'pegawai.pegawai_id')->select('absen.*', 'pegawai.pegawai_nama')->orderBy('Tanggal', 'asc')->paginate(10);;
 
     	return view('absen.index',['absen' => $absen]);
     }

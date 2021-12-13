@@ -12,8 +12,15 @@
 
 	<a href="/pegawai/tambah"> + Tambah Pegawai Baru</a>
 
-	<br/>
-	<br/>
+	<br>
+    <p>Cari @yield('title') :</p>
+    <div class="search">
+            <form action="/pegawai/cari" method="GET">
+                <input type="text" name="cari" placeholder="Cari Pegawai .." value="{{ old('cari') }}" >
+                <input type="submit" value="Cari">
+            </form>
+    </div>
+    <br>
 
 
 	<table class="table table-hover table-bordered table-sm">
@@ -31,6 +38,8 @@
 			<td>{{ $p->pegawai_umur }}</td>
 			<td>{{ $p->pegawai_alamat }}</td>
 			<td>
+                <a href="/pegawai/detail/{{ $p->pegawai_id }}">Details</a>
+                |
 				<a href="/pegawai/edit/{{ $p->pegawai_id }}">Edit</a>
 				|
 				<a href="/pegawai/hapus/{{ $p->pegawai_id }}">Hapus</a>
