@@ -3,6 +3,8 @@
 
 <head>
     <title>Aplikasi Kepegawaian - @yield('title')</title>
+    <link rel="icon" href="http://www.domain.com/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="http://www.domain.com/favicon.ico" type="image/x-icon" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link href="http://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/build/css/bootstrap-datetimepicker.css" rel="stylesheet">
 
