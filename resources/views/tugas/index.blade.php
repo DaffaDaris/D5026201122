@@ -50,6 +50,11 @@
 		</tbody>
 		@endforeach
 	</table>
+    Halaman : {{ $tugas->currentPage() }}<br/>
+	Jumlah Data : {{ $tugas->total() }}<br/>
+	Data Per Halaman : {{ $tugas->perPage() }}<br/>
+
+	{{ $tugas->links() }}
 
 
 @endsection

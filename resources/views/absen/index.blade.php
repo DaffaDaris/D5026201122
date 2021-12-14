@@ -48,5 +48,10 @@
 		</tbody>
 		@endforeach
 	</table>
+    Halaman : {{ $absen->currentPage() }}<br/>
+	Jumlah Data : {{ $absen->total() }}<br/>
+	Data Per Halaman : {{ $absen->perPage() }}<br/>
+
+	{{ $absen->links() }}
 
 @endsection
