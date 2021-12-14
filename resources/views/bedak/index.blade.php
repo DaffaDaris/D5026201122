@@ -32,8 +32,16 @@
 		<tbody>
 			<td>{{ $p->merkbedak }}</td>
 			<td>{{ $p->stockbedak }}</td>
-			<td>{{ $p->tersedia }}</td>
 			<td>
+                @if ($p->tersedia == 'Y')
+                Tersedia
+                @elseif ($p->tersedia == 'G')
+                Tidak Tersedia
+                @endif
+            </td>
+			<td>
+                <a href="/bedak/detail/{{ $p->kodebedak }}">Details</a>
+				|
 				<a href="/bedak/edit/{{ $p->kodebedak }}">Edit</a>
 				|
 				<a href="/bedak/hapus/{{ $p->kodebedak }}">Hapus</a>

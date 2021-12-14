@@ -31,8 +31,16 @@
 		<tbody>
 			<td>{{ $a->IDPegawai }}</td>
 			<td>{{ $a->Tanggal }}</td>
-			<td>{{ $a->Status }}</td>
 			<td>
+                @if ($a->Status == 'H')
+                    Hadir
+                @elseif ($a->Status == 'A')
+                    Tidak Hadir
+                @endif
+            </td>
+			<td>
+                <a href="/absen/detail/{{ $a->ID }}">Details</a>
+                |
 				<a href="/absen/edit/{{ $a->ID}}">Edit</a>
 				|
 				<a href="/absen/hapus/{{ $a->ID}}">Hapus</a>

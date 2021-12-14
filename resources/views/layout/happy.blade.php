@@ -7,105 +7,11 @@
     <link href="http://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/build/css/bootstrap-datetimepicker.css" rel="stylesheet">
 
     @yield('bootstrap')
+    <link href="\css\template.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Readex+Pro&family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <style>
-
-        .header{
-            width: 200px;
-            background: #1C1C26;
-            color: ghostwhite;
-            height: 100%;
-            position: fixed;
-            overflow: auto;
-        }
-
-        input[type="radio"]{
-            margin: 0 10px;
-        }
-        body{
-            font-family: 'Readex Pro', sans-serif;
-            height: 100%;
-            width: 100%;
-
-        }
-        .rounded-circle{
-            border-radius: 4px;
-            border:solid ghostwhite ;
-            margin-bottom: 20px;
-        }
-        .header-judul{
-            font-size: 30px;
-            font-weight: bolder;
-        }
-
-        input[type=text],
-        input[type=number] {
-            padding:5px;
-            border:2px solid #ccc;
-            -webkit-border-radius: 5px;
-            border-radius: 5px;
-
-        }
-
-        input[type=text]:focus,
-        input[type=number]:focus {
-            border-color:#333;
-        }
-        textarea{
-            padding:5px;
-            border:2px solid #ccc;
-            -webkit-border-radius: 5px;
-            border-radius: 5px;
-
-        }
-        input[type=submit] {
-
-            color: ghostwhite;
-            background:#1C1C26;
-            cursor:pointer;
-            -webkit-border-radius: 5px;
-            border-radius: 5px;
-            text-align: center;
-            border: none;
-            padding: 7px 10px 7px 10px;
-        }
-
-        footer {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            width:100vw;
-            background: #1C1C26;
-            height: auto;
-            color: ghostwhite;
-        }
-
-        .main{
-            margin-left: 15%;
-            padding: 15px;
-        }
-
-        .footer-content{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            text-align: center;
-            overflow: hidden;
-        }
-
-        .search{
-        }
-
-
-
-
-
-    </style>
 
     <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
@@ -122,7 +28,7 @@
             <header class=" py-3 px-2">
                     <div class="nav-navbar text-center">
                             <div class="header-judul"><strong>@yield('judulhalaman')</strong></div><br>
-                            <span ><strong><img  src="images\Heavy Weather.png" width="100"  class="rounded-circle"></a></strong></span><br>
+                            <img  src="/img/profile/Heavy Weather.png" width="100" class="rounded-circle"><br>
                             <span ><strong>Daffa' Daris Mahendra Ansori</strong></span><br>
                             <span ><strong>5026201122</strong></span><br>
 

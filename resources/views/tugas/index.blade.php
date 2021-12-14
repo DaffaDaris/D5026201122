@@ -33,8 +33,15 @@
 			<td>{{ $t->IDPegawai}}</td>
 			<td>{{ $t->Tanggal }}</td>
 			<td>{{ $t->NamaTugas}}</td>
-            <td>{{ $t->Status }}</td>
+            <td>
+            @if ($t->Status == 'S')
+                Selesai
+            @elseif ($t->Status == 'B')
+                Belum Selesai
+            @endif</td>
 			<td>
+                <a href="/tugas/detail/{{ $t->ID }}">Details</a>
+                |
 				<a href="/tugas/edit/{{ $t->ID }}">Edit</a>
 				|
 				<a href="/tugas/hapus/{{ $t->ID }}">Hapus</a>

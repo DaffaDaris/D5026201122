@@ -66,4 +66,29 @@ class BedakController extends Controller
         // alihkan halaman ke halaman bedak
         return redirect('/bedak');
     }
+
+    public function cari(Request $request)
+	{
+		// menangkap data pencarian
+		$cari = $request->cari;
+
+    		// mengambil data dari table bedak sesuai pencarian data
+		$bedak = DB::table('bedak')
+		->where('merkbedak','like',"%".$cari."%")
+		->paginate(10);
+
+    		// mengirim data bedak ke view index
+		return view('bedak.index',['bedak' => $bedak]);
+
+	}
+    public function view($id)
+    {
+        // mengambil data bedak berdasarkan id yang dipilih
+
+        $bedak = DB::table('bedak')->where('kodebedak',$id)->get();
+        // passing data bedak yang didapat ke view edit.blade.php
+        return view('bedak.detail',['bedak' => $bedak]);
+
+    }
+
 }

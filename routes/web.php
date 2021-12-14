@@ -48,6 +48,7 @@ Route::get('/tugas/edit/{id}','TugasController@edit');
 Route::post('/tugas/update','TugasController@update');
 Route::get('/tugas/hapus/{id}','TugasController@hapus');
 Route::get('/tugas/cari','TugasController@cari');
+Route::get('/tugas/detail/{id}','TugasController@view');
 
 
 //route tabel absen
@@ -58,6 +59,7 @@ Route::get('/absen/edit/{id}','AbsenController@edit');
 Route::post('/absen/update','AbsenController@update');
 Route::get('/absen/hapus/{id}','AbsenController@hapus');
 Route::get('/absen/cari','AbsenController@cari');
+Route::get('/absen/detail/{id}','AbsenController@view');
 
 
 //route tabel bedak
@@ -68,6 +70,7 @@ Route::get('/bedak/edit/{id}','BedakController@edit');
 Route::post('/bedak/update','BedakController@update');
 Route::get('/bedak/hapus/{id}','BedakController@hapus');
 Route::get('/bedak/cari','BedakController@cari');
+Route::get('/bedak/detail/{id}','BedakController@view');
 
 
 
