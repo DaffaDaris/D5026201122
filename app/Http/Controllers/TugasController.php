@@ -10,7 +10,7 @@ class TugasController extends Controller
 {
     public function index()
     {
-        $tugas = DB::table('tugas')->orderBy('IDPegawai', 'asc')->get();
+        $tugas = DB::table('tugas')->orderBy('IDPegawai', 'asc')->paginate(10);
 
         return view('tugas.index', ['tugas' => $tugas]);
     }

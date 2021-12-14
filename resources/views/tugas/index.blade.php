@@ -34,11 +34,12 @@
 			<td>{{ $t->Tanggal }}</td>
 			<td>{{ $t->NamaTugas}}</td>
             <td>
-            @if ($t->Status == 'S')
-                Selesai
-            @elseif ($t->Status == 'B')
-                Belum Selesai
-            @endif</td>
+                @if ($t->Status == 'S')
+                    Selesai
+                @elseif ($t->Status == 'B')
+                    Belum Selesai
+                @endif
+            </td>
 			<td>
                 <a href="/tugas/detail/{{ $t->ID }}">Details</a>
                 |
