@@ -10,7 +10,7 @@ class KeranjangController extends Controller
     public function index()
     {
         // mengambil data dari table keranjangbelanja
-        $keranjangbelanja = DB::table('keranjangbelanja')->orderBy('kodebarang', 'asc')->paginate(10);
+        $keranjangbelanja = DB::table('keranjangbelanja')->orderBy('ID', 'asc')->paginate(10);
 
         // mengirim data keranjangbelanja ke view index
         return view('keranjangbelanja.index', ['keranjangbelanja' => $keranjangbelanja]);
