@@ -45,7 +45,7 @@
                     <li class="nav-item"><a href="/absen" class="nav-link text-white">Absen</a></li>
                     <li class="nav-item"><a href="/tugas" class="nav-link text-white">Tugas</a></li>
                     <li class="nav-item"><a href="/bedak" class="nav-link text-white">Bedak</a></li>
-                    <li class="nav-item"><a href="" class="nav-link text-white">Praktikum</a></li>
+                    <li class="nav-item"><a href="/keranjangbelanja" class="nav-link text-white">Praktikum</a></li>
                 </ul>
             </nav>
             </div>
