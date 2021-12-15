@@ -72,5 +72,11 @@ Route::get('/bedak/hapus/{id}','BedakController@hapus');
 Route::get('/bedak/cari','BedakController@cari');
 Route::get('/bedak/detail/{id}','BedakController@view');
 
-
+//route tabel Keranjang belanja
+Route::get('/keranjangbelanja','KeranjangController@index');
+Route::get('/keranjangbelanja/tambah','KeranjangController@tambah');
+Route::post('/keranjangbelanja/store','KeranjangController@store');
+Route::get('/keranjangbelanja/edit/{id}','KeranjangController@edit');
+Route::post('/keranjangbelanja/update','KeranjangController@update');
+Route::get('/keranjangbelanja/hapus/{id}','KeranjangController@hapus');
 
