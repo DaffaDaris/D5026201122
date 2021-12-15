@@ -27,10 +27,15 @@
 			<td>{{ $p->ID }}</td>
 			<td>{{ $p->KodeBarang }}</td>
 			<td>{{ $p->Jumlah }}</td>
-            <td>{{ $p->Harga }}</td>
             <td>
+                Rp.
                 @php
-                    echo number_format($p->Harga * $p->Jumlah, 3, ',', '.')
+                    echo number_format($p->Harga, 0, '.', '.')
+                @endphp
+               </td>
+            <td>Rp.
+                @php
+                    echo number_format($p->Harga * $p->Jumlah, 0, '.', '.')
                 @endphp
             </td>
 			<td>
